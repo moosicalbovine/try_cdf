@@ -1,0 +1,102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3238,         93]
+NotebookOptionsPosition[      2998,         80]
+NotebookOutlinePosition[      3339,         95]
+CellTagsIndexPosition[      3296,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"initFileName", "=", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$UserBaseDirectory", ",", "\"\<Kernel\>\"", ",", "\"\<init.m\>\""}], 
+      "}"}], "]"}]}], ";"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Make", " ", "a", " ", "back"}], "-", "up"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"CopyFile", "[", 
+   RowBox[{"initFileName", ",", 
+    RowBox[{"initFileName", "<>", "\"\<_\>\"", "<>", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{
+       RowBox[{"ToString", "@", 
+        RowBox[{"Round", "[", 
+         RowBox[{"DateList", "[", "]"}], "]"}]}], ",", 
+       RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "<>", 
+     "\"\<.bak\>\""}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"exprs", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"initFileName", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Package\>\"", ",", "\"\<HeldExpressions\>\""}], "}"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"initFileName", ",", 
+    RowBox[{"Append", "[", 
+     RowBox[{"exprs", ",", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"HoldComplete", "[", 
+          RowBox[{"Needs", "[", "\"\<top`\>\"", "]"}], "]"}], ",", 
+         RowBox[{"HoldComplete", "[", 
+          RowBox[{"Needs", "[", "\"\<center`\>\"", "]"}], "]"}], ",", 
+         RowBox[{"HoldComplete", "[", 
+          RowBox[{"Needs", "[", "\"\<below`\>\"", "]"}], "]"}]}], "}"}], 
+       "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Package\>\"", ",", "\"\<HeldExpressions\>\""}], "}"}]}], 
+   "]"}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.5521989207931995`*^9, 3.5521989345259852`*^9}, {
+  3.55220007348213*^9, 3.552200104388898*^9}, {3.552200558781887*^9, 
+  3.5522005695815053`*^9}, {3.5522008829994316`*^9, 3.55220090954495*^9}, {
+  3.5522009527804227`*^9, 3.552200956329626*^9}, {3.552201011889804*^9, 
+  3.5522010420405283`*^9}, {3.5522011554780164`*^9, 3.552201200839611*^9}, {
+  3.5522013509931993`*^9, 3.552201354864421*^9}, {3.5522037350775614`*^9, 
+  3.5522037496153927`*^9}, {3.552203866089054*^9, 3.5522038837210627`*^9}, {
+  3.552203917449992*^9, 3.5522039324708514`*^9}, {3.5522049166031404`*^9, 
+  3.552204951247122*^9}, {3.552205043946424*^9, 3.5522050894760284`*^9}, {
+  3.552205299065016*^9, 3.5522053112697144`*^9}}]
+},
+WindowSize->{707, 505},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2437, 58, 212, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
